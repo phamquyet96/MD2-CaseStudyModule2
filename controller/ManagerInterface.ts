@@ -8,4 +8,10 @@ export interface ManagerInterface {
     showAll();
 
     findById(id: number);
+
+    findByName(name: string);
+
+    deleteName(name: string);
+
+    payment();
 }

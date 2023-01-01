@@ -4,11 +4,9 @@ exports.MainMenu = void 0;
 var UserManager_1 = require("../controller/UserManager");
 var AdminMenu_1 = require("./AdminMenu");
 var GuestMenu_1 = require("./GuestMenu");
-var ManagerFood_1 = require("../controller/ManagerFood");
 var readlineSync = require('readline-sync');
 var MainMenu = /** @class */ (function () {
     function MainMenu() {
-        this.listFood = new ManagerFood_1.ManagerFood();
         this.adminMenu = new AdminMenu_1.AdminMenu();
         this.guestMenu = new GuestMenu_1.GuestMenu();
         this.userManager = new UserManager_1.UserManager();
@@ -43,7 +41,6 @@ var MainMenu = /** @class */ (function () {
                 case 2: {
                     this.userManager.register();
                     this.guestMenu.selection();
-                    this.listFood.showAll();
                     break;
                 }
                 case 3:

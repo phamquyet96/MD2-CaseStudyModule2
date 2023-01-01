@@ -1,12 +1,10 @@
 import {UserManager} from "../controller/UserManager";
 import {AdminMenu} from "./AdminMenu";
 import {GuestMenu} from "./GuestMenu";
-import {ManagerFood} from "../controller/ManagerFood";
 
 const readlineSync = require('readline-sync');
 
 export class MainMenu {
-    private listFood: ManagerFood = new ManagerFood();
     private adminMenu: AdminMenu = new AdminMenu();
     private guestMenu: GuestMenu = new GuestMenu();
     private userManager: UserManager = new UserManager();
@@ -42,7 +40,6 @@ export class MainMenu {
                 case 2: {
                     this.userManager.register();
                     this.guestMenu.selection();
-                    this.listFood.showAll();
                     break;
                 }
                 case 3:

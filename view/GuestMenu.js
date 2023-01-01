@@ -35,7 +35,7 @@ var GuestMenu = /** @class */ (function () {
                     this.GuestFood.deleteName(deleteNameFood);
                     break;
                 case 4:
-                    this.GuestFood.payment();
+                    console.log("Total amount of money guest has to pay: " + this.GuestFood.payment());
                     break;
                 case 5:
                     return;
