@@ -1,4 +1,4 @@
-import {UserManager} from "../controller/UserManager";
+import {AdminManager} from "../controller/AdminManager";
 import {AdminMenu} from "./AdminMenu";
 import {GuestMenu} from "./GuestMenu";
 
@@ -7,7 +7,7 @@ const readlineSync = require('readline-sync');
 export class MainMenu {
     private adminMenu: AdminMenu = new AdminMenu();
     private guestMenu: GuestMenu = new GuestMenu();
-    private userManager: UserManager = new UserManager();
+    private userManager: AdminManager = new AdminManager();
     private menu: string = `
     1. Login
     2. Register

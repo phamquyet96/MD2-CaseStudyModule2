@@ -2,7 +2,7 @@ import {User} from "../model/User";
 
 const readlineSync = require('readline-sync');
 
-export class UserManager {
+export class AdminManager {
     private userList: User[] = [];
 
     constructor() {

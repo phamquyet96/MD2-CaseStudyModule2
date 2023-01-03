@@ -1,16 +1,18 @@
 import {ManagerFood} from "../controller/ManagerFood";
 import {Food} from "../model/Food";
+import {GuestManager} from "../controller/GuestManager";
 
 const readlineSync = require('readline-sync');
 
 export class GuestMenu {
-    private GuestFood: ManagerFood = new ManagerFood();
+    private GuestFood: GuestManager = new GuestManager();
     private guestMenu = `This is Guest. 
-                    1.Order food
-                    2.Watch the menu
-                    3.Delete food
-                    4.Payment
-                    5.Exit`;
+                    1.Watch menu
+                    2.Order food
+                    3.Watch list order
+                    4.Delete food
+                    5.Payment
+                    6.Exit`;
 
     selection() {
         while (true) {
@@ -18,29 +20,30 @@ export class GuestMenu {
             do {
                 console.log(this.guestMenu);
                 choice = +readlineSync.question("Choice: ");
-                if (choice < 1 || choice > 5) {
+                if (choice < 1 || choice > 6) {
                     console.log("Wrong choice. Try again");
                 }
-            } while (choice < 1 || choice > 5);
+            } while (choice < 1 || choice > 6);
             switch (choice) {
                 case 1:
-                    let id = +readlineSync.question("Enter id: ");
-                    let name = readlineSync.question("Enter name: ");
-                    let price = +readlineSync.question("Enter price: ");
-                    let food = new Food(id, name, price);
-                    this.GuestFood.add(food);
+                    console.table(ManagerFood.listFood);
                     break;
+
                 case 2:
-                    this.GuestFood.showAll();
+                    let id = +readlineSync.question("Enter id: ");
+                    this.GuestFood.order(id);
                     break;
                 case 3:
-                    let deleteNameFood = readlineSync.question("Enter the name food you wanna delete: ");
-                    this.GuestFood.deleteName(deleteNameFood);
+                    console.table(this.GuestFood.showListOrder());
                     break;
                 case 4:
-                    console.log("Total amount of money guest has to pay: "+ this.GuestFood.payment());
+                    let deleteNameFood = readlineSync.question("Enter the name food you wanna delete: ");
+                    this.GuestFood.deleteOrder(deleteNameFood);
                     break;
                 case 5:
+                    console.log("Total amount of money guest has to pay: "+ this.GuestFood.payment());
+                    break;
+                case 6:
                     return;
             }
         }
