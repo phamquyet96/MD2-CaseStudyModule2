@@ -7,7 +7,7 @@ var readlineSync = require('readline-sync');
 var GuestMenu = /** @class */ (function () {
     function GuestMenu() {
         this.GuestFood = new GuestManager_1.GuestManager();
-        this.guestMenu = "This is Guest. \n                    1.Watch menu\n                    2.Order food\n                    3.Watch list order\n                    4.Delete food\n                    5.Payment\n                    6.Exit";
+        this.guestMenu = "\n               .....This is Guest..... \n                    1.Watch menu\n                    2.Order food\n                    3.Watch list order\n                    4.Delete food\n                    5.Payment\n                    6.Exit";
     }
     GuestMenu.prototype.selection = function () {
         while (true) {
@@ -35,7 +35,7 @@ var GuestMenu = /** @class */ (function () {
                     this.GuestFood.deleteOrder(deleteNameFood);
                     break;
                 case 5:
-                    console.log("Total amount of money guest has to pay: " + this.GuestFood.payment());
+                    console.log("Total amount of money guest has to pay: " + this.GuestFood.payment() + " VND");
                     break;
                 case 6:
                     return;

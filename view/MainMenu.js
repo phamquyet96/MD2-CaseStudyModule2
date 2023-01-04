@@ -10,7 +10,7 @@ var MainMenu = /** @class */ (function () {
         this.adminMenu = new AdminMenu_1.AdminMenu();
         this.guestMenu = new GuestMenu_1.GuestMenu();
         this.userManager = new AdminManager_1.AdminManager();
-        this.menu = "\n    1. Login\n    2. Register\n    3. Exit";
+        this.menu = "\n    .....Food Manager Software.....\n    1. Login\n    2. Register\n    3. Exit";
     }
     MainMenu.prototype.selection = function () {
         while (true) {

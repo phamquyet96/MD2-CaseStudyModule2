@@ -9,6 +9,7 @@ export class MainMenu {
     private guestMenu: GuestMenu = new GuestMenu();
     private userManager: AdminManager = new AdminManager();
     private menu: string = `
+    .....Food Manager Software.....
     1. Login
     2. Register
     3. Exit`

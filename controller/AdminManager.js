@@ -6,11 +6,9 @@ var readlineSync = require('readline-sync');
 var AdminManager = /** @class */ (function () {
     function AdminManager() {
         this.userList = [];
-        this.userList.push(new User_1.User('phamquyet', '123456', 0));
-        this.userList.push(new User_1.User('phamquyet1', '234567', 0));
-        this.userList.push(new User_1.User('phamquyet2', '345678', 1));
-        this.userList.push(new User_1.User('phamquyet3', '456789', 1));
-        this.userList.push(new User_1.User('phamquyet4', '5678901', 0));
+        this.userList.push(new User_1.User('phamquyet', '123', 0));
+        this.userList.push(new User_1.User('phamquyet1', '234', 0));
+        this.userList.push(new User_1.User('phamquyet4', '567', 0));
     }
     AdminManager.prototype.register = function () {
         var flag = true;

@@ -5,7 +5,8 @@ const readlineSync = require('readline-sync');
 
 export class AdminMenu {
     private listAdminFood: ManagerFood = new ManagerFood();
-    private adminMenu = `This is Admin.
+    private adminMenu = `
+       .....This is Admin.....
             1.Creat food
             2.Show List food
             3.Update food

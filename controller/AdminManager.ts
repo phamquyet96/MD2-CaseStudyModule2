@@ -6,11 +6,9 @@ export class AdminManager {
     private userList: User[] = [];
 
     constructor() {
-        this.userList.push(new User('phamquyet', '123456', 0));
-        this.userList.push(new User('phamquyet1', '234567', 0));
-        this.userList.push(new User('phamquyet2', '345678', 1));
-        this.userList.push(new User('phamquyet3', '456789', 1));
-        this.userList.push(new User('phamquyet4', '5678901', 0));
+        this.userList.push(new User('phamquyet', '123', 0));
+        this.userList.push(new User('phamquyet1', '234', 0));
+        this.userList.push(new User('phamquyet4', '567', 0));
     }
 
     register() {

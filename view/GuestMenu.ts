@@ -5,7 +5,8 @@ const readlineSync = require('readline-sync');
 
 export class GuestMenu {
     private GuestFood: GuestManager = new GuestManager();
-    private guestMenu = `This is Guest. 
+    private guestMenu = `
+               .....This is Guest..... 
                     1.Watch menu
                     2.Order food
                     3.Watch list order
@@ -40,7 +41,7 @@ export class GuestMenu {
                     this.GuestFood.deleteOrder(deleteNameFood);
                     break;
                 case 5:
-                    console.log("Total amount of money guest has to pay: "+ this.GuestFood.payment());
+                    console.log("Total amount of money guest has to pay: "+ this.GuestFood.payment()+" VND");
                     break;
                 case 6:
                     return;
