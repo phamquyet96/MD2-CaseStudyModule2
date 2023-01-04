@@ -20,7 +20,7 @@ export class AdminManager {
         while (flag) {
             newUserName = readlineSync.question("Enter username: ");
             if (!newUserName) {
-                console.log("Username cann't be empty!")
+                console.log("Username cann't be empty!");
             } else {
                 flag = false;
             }

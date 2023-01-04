@@ -1,5 +1,4 @@
 import {ManagerFood} from "../controller/ManagerFood";
-import {Food} from "../model/Food";
 import {GuestManager} from "../controller/GuestManager";
 
 const readlineSync = require('readline-sync');

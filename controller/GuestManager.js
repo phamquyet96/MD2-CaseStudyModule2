@@ -2,7 +2,6 @@
 exports.__esModule = true;
 exports.GuestManager = void 0;
 var ManagerFood_1 = require("./ManagerFood");
-var readlineSync = require('readline-sync');
 var GuestManager = /** @class */ (function () {
     function GuestManager() {
         this.guestManager = [];

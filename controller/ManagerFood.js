@@ -32,21 +32,6 @@ var ManagerFood = /** @class */ (function () {
         }
         return -1;
     };
-    ManagerFood.prototype.findByName = function (name) {
-        for (var i = 0; i < ManagerFood.listFood.length; i++) {
-            if (ManagerFood.listFood[i].getName() === name) {
-                return i;
-            }
-        }
-        return -1;
-    };
-    ManagerFood.prototype.deleteName = function (name) {
-        var index = this.findByName(name);
-        if (index == -1) {
-            return "No exist in the menu";
-        }
-        ManagerFood.listFood.splice(index, 1);
-    };
     ManagerFood.listFood = [];
     return ManagerFood;
 }());

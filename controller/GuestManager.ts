@@ -1,6 +1,5 @@
 import {ManagerFood} from "./ManagerFood";
 
-const readlineSync = require('readline-sync');
 export class GuestManager{
     guestManager=[];
     order(id:number){
